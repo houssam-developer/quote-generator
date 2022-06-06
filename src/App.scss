@@ -4,13 +4,15 @@
 }
 
 .quote-author {
-	@apply p-4 flex items-center justify-between;
+	@apply p-4 flex items-center justify-between transition-[background-color] mt-4;
 
 	&__name {
+		@apply transition-colors;
 		color: var(--text-quote-author-color);
 	}
 
 	&__type {
+		@apply transition-colors;
 		color: var(--text-quote-type-color);
 	}
 
@@ -21,7 +23,4 @@
 		--text-quote-type-color: #828282;
 	}
 
-	@media screen and (min-width: 500px) {
-		@apply p-8;
-	}
 }

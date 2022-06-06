@@ -5,7 +5,7 @@ export const quoteService = (function makeQuoteService() {
 		try {
 			return fetch(`${API_URL}${argument}`)
 				.then(res => res.json())
-				.then(data => data.data);
+				.then(jsonObj => jsonObj.data);
 		} catch (err) {
 			console.log('fetchQuotes() ERROR: ', err);
 		}
@@ -16,12 +16,12 @@ export const quoteService = (function makeQuoteService() {
 	}
 
 	function findByAuthor(author) {
-		const queryParameter = `?${author}`;
+		const queryParameter = `?author=${author}`;
 		return commonFind(queryParameter);
 	}
 
 	function findByType(type) {
-		const queryParameter = `?${type}`;
+		const queryParameter = `?type=${type}`;
 		return commonFind(queryParameter);
 	}
 
