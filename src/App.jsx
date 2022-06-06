@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { MdAutorenew, MdArrowRightAlt } from "react-icons/md";
 import './App.scss';
+import { quoteService } from './services/QuoteService';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 	function showAllQuotes(e) {
 		e.preventDefault();
 		console.log('show all quotes');
-		setDisplayAllQuotesFlag(true);
+		//setDisplayAllQuotesFlag(true);
+		console.log(quoteService.findAll().then(data => console.log(data)));
 	}
 
 	return (
