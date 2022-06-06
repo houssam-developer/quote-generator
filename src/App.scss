@@ -1,0 +1,27 @@
+:root {
+	--text-quote-author-color: #4F4F4F;
+	--text-quote-type-color: #828282;
+}
+
+.quote-author {
+	@apply p-4 flex items-center justify-between;
+
+	&__name {
+		color: var(--text-quote-author-color);
+	}
+
+	&__type {
+		color: var(--text-quote-type-color);
+	}
+
+	&:hover {
+		@apply bg-[#333333];
+
+		--text-quote-author-color: #f2f2f2;
+		--text-quote-type-color: #828282;
+	}
+
+	@media screen and (min-width: 500px) {
+		@apply p-8;
+	}
+}
